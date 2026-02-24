@@ -1,0 +1,42 @@
+# Source files (publish dist/ only)
+src/
+tsconfig.json
+
+# Tests
+tests/
+*.test.ts
+*.spec.ts
+vitest.config.*
+
+# Development
+.dc/
+benchmark/
+.git/
+.gitignore
+
+# Dependencies (npm install handles this)
+node_modules/
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.*
+
+# Lock files (not needed for published packages)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

@@ -1,0 +1,44 @@
+{
+  "memories": [
+    {
+      "type": "constraint",
+      "content": "All IDs must be UUIDs, not auto-increment integers. Use crypto.randomUUID() or nanoid.",
+      "rationale": "UUIDs are more secure, don't leak information about record count, and work better in distributed systems."
+    },
+    {
+      "type": "constraint",
+      "content": "Use async/await for all asynchronous code. Never use callbacks or .then() chains.",
+      "rationale": "Async/await is more readable and easier to debug than callback hell or promise chains."
+    },
+    {
+      "type": "constraint",
+      "content": "All API responses must include a 'timestamp' field with ISO 8601 format.",
+      "rationale": "Timestamps help with debugging, caching, and audit trails."
+    },
+    {
+      "type": "decision",
+      "content": "Using PostgreSQL with Prisma ORM for all database operations.",
+      "rationale": "Prisma provides type-safe database access, migrations, and works great with TypeScript."
+    },
+    {
+      "type": "decision",
+      "content": "REST API with JSON responses. Follow standard HTTP methods: GET for read, POST for create, PUT for update, DELETE for delete.",
+      "rationale": "REST is well-understood, cacheable, and works with all clients."
+    },
+    {
+      "type": "decision",
+      "content": "Using JWT tokens for authentication. Store in httpOnly cookies, not localStorage.",
+      "rationale": "JWTs are stateless and scale well. httpOnly cookies prevent XSS attacks."
+    },
+    {
+      "type": "heuristic",
+      "content": "Prefer early returns over nested if/else blocks. Return early for error cases.",
+      "rationale": "Early returns reduce nesting and make code easier to follow."
+    },
+    {
+      "type": "heuristic",
+      "content": "Use descriptive variable names instead of comments. The code should be self-documenting.",
+      "rationale": "Good names eliminate the need for most comments. Comments can become outdated."
+    }
+  ]
+}

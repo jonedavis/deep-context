@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+coverage/
+.nyc_output/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Deep Context local data (for testing)
+.dc/
+test-project/
+
+# Debug
+*.log
+npm-debug.log*
+
+# Benchmark local data
+benchmark/results/
+benchmark/project/
+benchmark/DEMO-TRANSCRIPT.md
+benchmark/demo-session.md
